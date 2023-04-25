@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MyVirus.exe" version="1.0.0.0" publicKeyToken="e30357b1f4c715e3" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MyVirus" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MyVirus.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MyVirus.exe" size="8664">
+      <assemblyIdentity name="MyVirus" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>iesupSR/hRywr/cGuTGaPJeNtiPZ5XACjEwYDrEByoY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MyVirus.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=DESKTOP-GHT9BD5\tung" issuerKeyHash="fe7a0bf9764c4ee1cf8e51e0aa4c85a7a39bb5fe" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>JNK9CC6CeTsuIW4gLSL25sLgxbHqwZJL7tO1o95UDXQ=</DigestValue></Reference></SignedInfo><SignatureValue>cHIvOjF5qkE1AVq/u4vewL0ESIJn0CczLmhoxKg03T/1vmMApaBXFyyp7ME2V7R0oY2Qi9G3ozi9UTTfet5dSGApO7mut+xGcWm69VF9L5YCfG5YoxiCrc4KwFYdLQ2ViWwRTVlFtTNwHstcjpZND6oP8IgYPks0ZQxYw43s6Dk=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>lLiaGfDpeSFmGZirnCqYrMITpC9eK+aZVmzd5t/DGJBUcoJLBU7Y23gkiivjad26Vv7/DLmk8L4ejF3FfdA2I7FiPykXIai1jAgBE/FybYPbBXi0D0CjhLxuxLxxP6E3FZ8jsXYHTzhXSemDQw3vLmpAl/IAFiigNrC2Pdsmp20=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="740d54dea3b5d3ee4b92c1eab1c5e0c2e6f6222d206e212e3b79822e08bdd224" Description="" Url=""><as:assemblyIdentity name="MyVirus.exe" version="1.0.0.0" publicKeyToken="e30357b1f4c715e3" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-GHT9BD5\tung</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>6q9GGybYkx+6z28/75XDdF/9Hb2E/VZcowr6QCCNcwM=</DigestValue></Reference></SignedInfo><SignatureValue>OE0qaw0Bk/hE/XXtOpvW9p/qrR3KMw6xigxK6X3qg+lVHZrUPTmhB0czGCnsil5bGc2viXkZA2K8vovVGOQVyRiXWyFKPEfoSjqyUM/SXw6/w1NR8uDE6AuYcLN3jejK/IK3WGkVBS+/SsX+cxNDR+X2VBSvxZzBCcOwofDwfcQ=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>lLiaGfDpeSFmGZirnCqYrMITpC9eK+aZVmzd5t/DGJBUcoJLBU7Y23gkiivjad26Vv7/DLmk8L4ejF3FfdA2I7FiPykXIai1jAgBE/FybYPbBXi0D0CjhLxuxLxxP6E3FZ8jsXYHTzhXSemDQw3vLmpAl/IAFiigNrC2Pdsmp20=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQOUZ9iIaxboxBd/kg1AKk+jANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigARABFAFMASwBUAE8AUAAtAEcASABUADkAQgBEADUAXAB0AHUAbgBnMB4XDTIyMTIxMjA5MzQzMFoXDTIzMTIxMjE1MzQzMFowMzExMC8GA1UEAx4oAEQARQBTAEsAVABPAFAALQBHAEgAVAA5AEIARAA1AFwAdAB1AG4AZzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAlLiaGfDpeSFmGZirnCqYrMITpC9eK+aZVmzd5t/DGJBUcoJLBU7Y23gkiivjad26Vv7/DLmk8L4ejF3FfdA2I7FiPykXIai1jAgBE/FybYPbBXi0D0CjhLxuxLxxP6E3FZ8jsXYHTzhXSemDQw3vLmpAl/IAFiigNrC2Pdsmp20CAwEAATANBgkqhkiG9w0BAQsFAAOBgQCNuW0Rs6juYHhPEG4FNbhxJR/ILlWHBtrQ0FgK7hhrpT2iW0spZ3osm6twZVNcHiiECY31EiMk0YcL/bFg51+CQ7YG31cQtxNuNqAzIfr2hhIg1G7kxW/z0xYofCYK8VvyqR+RqrEtTD17+hwvwo5rgPP3HbTWUGoBUke1DXiz5Q==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
