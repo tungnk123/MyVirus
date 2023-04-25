@@ -15,6 +15,7 @@ namespace MyVirus
         
         public Form1()
         {
+            //test commit 
             InitializeComponent();
             this.BackColor = Color.Blue;
             this.TopMost = true;
