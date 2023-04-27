@@ -1,29 +1,24 @@
-name: hello world
-on:
+name: dotnet package
 
-  push:
-    paths:
-      - '!README.md'
-      - '!docs/**'
-      - '**.js'
-    branches:
-      - 'main'
-      - 'release/**'
-      - '!dev/**'
-  pull_request:
-    type: [opened, reopened, synchronize]
+on: [push]
 
-  workflow_dispatch:
 jobs:
-  say-hello:
+  build:
+
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [ '3.1.x', '6.0.x' ]
+
     steps:
-      - if: ${{github.event_name == 'pull_request'}}
-        uses: mheap/github-action-required-labels@v1
+      - uses: actions/checkout@v3
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
         with:
-          mode: exactly
-          count: 0
-          labels: "do not build"
-      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
-      - run: echo Hello world, today is $TODAY
-      - run: docker image ls     
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal
